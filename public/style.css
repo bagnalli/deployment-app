@@ -1,8 +1,7 @@
 * {
   margin: 0;
-  box-sizing: border-box;
-  background-color: rgb(25, 26, 33);
-  color: rgb(255, 255, 255);
+  /* box-sizing: border-box; */
+  color: rgb(25, 26, 33);
   padding: 0.5rem;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 350;
@@ -13,7 +12,6 @@
 }
 
 h1 {
-  color: white;
   padding: 16px;
   font-size: 48px;
   text-align: center;
@@ -24,7 +22,6 @@ h3 {
 }
 
 h4 {
-  color: #cecdcd;
   padding: 0.5rem;
 }
 

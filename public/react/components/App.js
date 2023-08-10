@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ItemsList } from "./ItemsList";
 import { Detail } from "./Detail";
 import { Form } from "./Form";
+import NavBar from "./NavBar";
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
@@ -36,15 +37,16 @@ export const App = () => {
     setDetail(false);
   }
 
-  useEffect(() => {
-    fetchItems(fetchItems);
+  useEffect(async () => {
+    await fetchItems();
   }, []);
 
   return (
     // Landing Page design with all items
-    <main>
-      <>
-        <h1>Le Fab 4's Items Store</h1>
+    <>
+      <NavBar />
+      <main>
+        <h1>Browse Our Items</h1>
 
         {form && <Form items={form} setForm={setForm} />}
         {!detail && !form ? (
@@ -63,7 +65,7 @@ export const App = () => {
             />
           )
         )}
-      </>
-    </main>
+      </main>
+    </>
   );
 };
